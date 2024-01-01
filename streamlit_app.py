@@ -49,7 +49,7 @@ if streamlit.button('Get fruit load list'):
 
 def insert_row_sf(new_fr, conn):
     with conn.cursor() as cur:
-        cur.execute("insert into FRUIT_LOAD_LIST values ('{new_fr}') ")
+        cur.execute(f"insert into FRUIT_LOAD_LIST values ('{new_fr}') ")
         return "Thanks for adding " + add_my_fruit
 
 add_my_fruit = streamlit.text_input('What fruit would you like to add?','jackfruit')
